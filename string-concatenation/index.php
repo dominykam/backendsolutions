@@ -4,8 +4,10 @@
     $lastName = "Muraskaite";
 
     // link variables to create full name
-    $fullName = $firstName . " " . $lastName;
+    $fullName = $firstName . ' ' . $lastName;
 
     // Get the character count of full name
-    $nameLength = strlen($fullName);
+    $fullnameLength = strlen($fullName);
+
+
 ?>
