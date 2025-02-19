@@ -9,5 +9,6 @@
     // Get the character count of full name
     $fullnameLength = strlen($fullName);
 
-
+    echo "Full Name: " . $fullName . "<br>";
+    echo "Length of Full Name: " . $fullnameLength;
 ?>
