@@ -13,12 +13,10 @@
 
         <h2>Part 1</h2>
 
-
-
         <?php
         $fruit = "coconut";
 
-        $fruitLength = strlen($fruit); //Count how many characters the variable fruit has, using a PHP string function</li> 
+        $fruitLength = strlen($fruit); //Count how many characters the variable fruit has, using a PHP string function> 
         
         echo "Fruit: " . $fruit . "<br>"; //Print this variable>
 
@@ -31,12 +29,19 @@
 
         <h2>Part 2</h2>
 
-        <ul>
-            <li>Create a variable <code>fruit</code> with the value <code>pineable</code></li>
-            <li>Determine the position of the last 'a' in the variable <code>$fruit</code></li>
-            <li>Print this value.</li>
-            <li>Convert the value of the <code>$fruit</code> variable to uppercase using a PHP string function.</li>
-        </ul>
+        <?php
+        $fruit2 = "pineapple"; // Create a variable $fruit2 with the value "pineapple"
+        $fruit2Needle = "a";
+        $lastPosition = strrpos($fruit2, $fruit2Needle); // Determine the position of the last 'a' in the variable $fruit2
+        $uppercaseFruit = strtoupper($fruit2); // Convert the value of $fruit2 to uppercase
+
+        // Output results
+        echo "Last position of 'a' in pineapple: " . $lastPosition . "<br>";
+        echo "Uppercase Fruit: " . $uppercaseFruit . "<br>";
+        ?>
+
+        <p> The position of the last '<?= $n?>' is: <?= $lastPosition ?></p>
+
 
         <h2>Part 3</h2>
 
