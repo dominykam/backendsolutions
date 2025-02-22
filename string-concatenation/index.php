@@ -7,8 +7,22 @@
     $fullName = $firstName . ' ' . $lastName;
 
     // Get the character count of full name
-    $fullnameLength = strlen($fullName);
+    $fullNameLength = strlen($fullName);
 
-    echo "Full Name: " . $fullName . "<br>";
-    echo "Length of Full Name: " . $fullnameLength;
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p><?= $fullName ?></p>
+    <p><?= $firstName ?> <?= $lastName ?></p>
+    <p>The name "<?= $fullName ?>" contains <?= $fullNameLength ?> characters</p>
+
+</body>
+</html>
