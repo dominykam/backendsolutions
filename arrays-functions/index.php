@@ -6,6 +6,8 @@ var_dump($animals);
 
 $numAnimals = count($animals); //counts animals
 
+$teZoekenDier = "Cat"; 
+
 // Check if the animal exists in the array
 if (in_array($teZoekenDier, $animals)) {
     $message = "The animal '$teZoekenDier' is found";
