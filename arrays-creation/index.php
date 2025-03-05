@@ -29,9 +29,9 @@
                 $animals[] = 'Parrot';
                 $animals[] = 'Penguin';
                 $animals[] = 'Hawk';
+
+                var_dump($animals);
                 ?>
-
-
 
 
                 <li>Create a new array containing 5 vehicles, making sure you can determine which category of vehicle it is (2-dimensional array), such as 'land vehicles', 'water vehicles', 'air vehicles'.
