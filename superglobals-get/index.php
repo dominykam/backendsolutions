@@ -1,14 +1,13 @@
 <?php include 'get.php'; ?>
 
 <?php
-// Check if 'id' is set in the URL and valid
+
 if (isset($_GET['id']) && is_numeric($_GET['id']) && $_GET['id'] >= 0 && $_GET['id'] < count($articles)) {
-    // Get the article based on the id from GET
+
     $article = $articles[$_GET['id']];
-    // Change the title of the page to the article's title
+ 
     $pageTitle = $article['title'];
 } else {
-    // If no valid id is set, use a default title
     $pageTitle = "Mini Newspaper";
 }
 ?>
