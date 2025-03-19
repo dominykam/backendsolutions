@@ -45,7 +45,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         <button type="submit">Submit</button>
     </form>
 
-    <p><?php echo $message; ?></p> 
+    <p><?php echo $message; ?></p>  <!--dont use echo inside--> 
 
 </body>
 </html>
