@@ -5,13 +5,12 @@ try {
     // Create SQLite DB connection
     $db = createSqliteDbConnection('back-end-users-exercise.db');
     
-    // Create the 'users' table if it doesn't exist
     $createTableQuery = "CREATE TABLE IF NOT EXISTS users (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         username TEXT NOT NULL,
         password TEXT NOT NULL
     )";
-    $db->exec($createTableQuery);  // Execute the table creation query
+    $db->exec($createTableQuery);
     
     // Fetch all users
     $usersQuery = "SELECT * FROM users";
@@ -25,13 +24,13 @@ try {
         $deleteQuery = "DELETE FROM users WHERE id = :id";
         $params = [':id' => $userIdToDelete];
         
-        // Execute the query
+        // Execute query
         $stmt = $db->prepare($deleteQuery);
         $stmt->execute($params);
 
-        // Set success message and redirect
+        // success message
         $_SESSION['success_message'] = "User deleted successfully!";
-        header("Location: index.php");  // Redirect to index.php after deletion
+        header("Location: index.php");  // go back to index.php after deleting
         exit();
     }
     
@@ -39,7 +38,6 @@ try {
     echo "Error: " . $e->getMessage();
 }
 
-// Function to create SQLite DB connection
 function createSqliteDbConnection($dbFilePath)
 {
     $db = new PDO("sqlite:" . $dbFilePath);
@@ -47,7 +45,6 @@ function createSqliteDbConnection($dbFilePath)
     return $db;
 }
 
-// Function to fetch results from a query
 function fetchResultForQuery($db, $query, $params = false)
 {
     $preparedStatement = $db->prepare($query);
